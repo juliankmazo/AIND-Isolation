@@ -41,7 +41,7 @@ def custom_score(game, player):
         return float("-inf")
     if game.is_winner(player):
         return float("inf")
-    return float(len(game.get_legal_moves(player)))
+    return float(len(game.get_legal_moves(player)) - len(game.get_legal_moves(game.get_opponent(player))) ** 2)
 
 def custom_score_2(game, player):
     if game.is_loser(player):
