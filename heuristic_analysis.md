@@ -45,6 +45,12 @@ As the third one, it calculates the difference but squaring the player moves
 The best performance is given by the 3rd option `player_moves - opponent_moves ** 2`. Looks like givin penalty to the opponent moves is working.
 But we cannot conclude that that is the best option because all the results are really close to each other. The minimum is `74.52%` and the maximum is `77.38%`.
 
+I choosed tho because:
+
+1. It has the best score
+2. It wins `2/3` of the times agains `MM_Improved`
+3. It performs really well against Alpha Beta
+
 We would need to run much more games in order to be more confident about the results, but the improvement looks minimum though. I wanted to try another heuristic
 but given the constrain of the `Board` it wouldn't have a lot of difference with the player moves. I wanted to try the liberty degrees of the player. I mean, the
 directions where a player can move. If the player is in the center, it can move up, down, right, left, and in 4 diagonals. That's a total of 8 degrees of liberty.
